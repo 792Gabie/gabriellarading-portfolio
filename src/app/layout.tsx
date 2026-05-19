@@ -46,7 +46,7 @@ export default function RootLayout({
                 </a>
                 {/* Replace href with your actual GitHub URL when ready */}
                 <a
-                  href="https://github.com/gabriellarading"
+                  href="https://github.com/792Gabie"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-1.5 transition hover:text-blue-600"

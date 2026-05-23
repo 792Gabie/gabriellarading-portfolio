@@ -8,34 +8,18 @@ const stats = [
   { value: "84%",  label: "Customer Retention" },
 ];
 
-const skillCategories = [
-  {
-    title: "Data and Analytics",
-    icon: "📊",
-    skills: ["Power BI", "DAX", "SQL", "Python", "Excel (Advanced)", "Celonis Process Mining"],
-  },
-  {
-    title: "CRM and Enterprise Systems",
-    icon: "🔧",
-    skills: ["SimpleCRM", "Zendesk", "Jira", "Confluence", "Jasper Reports"],
-  },
-  {
-    title: "Implementation and Change",
-    icon: "🚀",
-    skills: ["Requirements Gathering", "UAT Leadership", "Defect Management", "Change Management", "Agile / Scrum", "Sprint Planning & Standups", "Go-live Enablement", "Process Mapping (Visio)"],
-  },
-  {
-    title: "Operations and Compliance",
-    icon: "⚙️",
-    skills: ["SOP Development", "Workflow Optimisation", "Compliance Documentation", "Approval Workflows", "Operational Dashboards", "Regulatory Compliance"],
-  },
+const skillTeasers = [
+  { icon: "📊", title: "Data & Analytics" },
+  { icon: "🔧", title: "CRM & Enterprise Systems" },
+  { icon: "🚀", title: "Implementation & Change" },
+  { icon: "⚙️", title: "Operations & Compliance" },
 ];
 
 const cards = [
   {
     label: "Summary",
     color: "text-blue-600",
-    body: "Operations and Business Analyst with 5+ years turning operational breakdowns into measurable improvements across CRM systems, enterprise implementations, and customer success workflows in regulated financial services.",
+    body: "Operations & Business Analyst with 6+ years turning operational breakdowns into measurable improvements across CRM systems, enterprise implementations, and customer success workflows in regulated financial services.",
   },
   {
     label: "Impact",
@@ -78,31 +62,13 @@ export default function Home() {
 
           <p className="mt-6 max-w-3xl text-lg text-blue-100 md:text-xl">
             Operations Analyst&nbsp;·&nbsp;Business Analyst&nbsp;·&nbsp;Customer Success Operations
-            &nbsp;
+            &nbsp;·&nbsp;System Implementation&nbsp;·&nbsp;Data Analysis &amp; Process Improvement
           </p>
 
           <p className="mt-4 max-w-2xl text-base text-slate-300">
             I fix systems that quietly break businesses — then build the infrastructure
             to make sure they don&apos;t break again.
           </p>
-
-          {/* Certifications strip */}
-          <div className="mt-6 flex flex-wrap gap-2">
-            {[
-              "Power BI DAX Masterclass",
-              "Celonis Foundations",
-              "Customer Experience Leadership",
-              "Strategic Thinking",
-              "Customer Service Foundations",
-            ].map((cert) => (
-              <span
-                key={cert}
-                className="rounded-full border border-blue-400/30 bg-blue-500/10 px-3 py-1 text-xs text-blue-200"
-              >
-                🎓 {cert}
-              </span>
-            ))}
-          </div>
 
           {/* Chips */}
           <div className="mt-7 flex flex-wrap gap-2 text-sm">
@@ -178,11 +144,10 @@ export default function Home() {
         </div>
       </section>
 
-      {/* ── Skills preview ────────────────────────────────────────────────── */}
+      {/* ── Skills teaser ─────────────────────────────────────────────────── */}
       <section className="bg-white py-20">
         <div className="mx-auto max-w-6xl px-6">
-
-          <div className="mb-12">
+          <div className="mb-10">
             <p className="text-xs font-bold uppercase tracking-widest text-blue-600">
               Skills &amp; Tools
             </p>
@@ -190,34 +155,24 @@ export default function Home() {
               What I bring to the table
             </h2>
             <p className="mt-3 max-w-2xl text-slate-500">
-              Built across 6+ years in regulated financial services — combining technical
-              depth with the change management skills to make sure systems actually get adopted.
+              Built across 6+ years in regulated financial services — technical depth
+              paired with the change management skills to make systems get adopted.
             </p>
           </div>
 
-          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-            {skillCategories.map((cat) => (
+          <div className="grid grid-cols-2 gap-4 sm:grid-cols-4">
+            {skillTeasers.map((cat) => (
               <div
                 key={cat.title}
-                className="rounded-2xl border border-slate-100 bg-slate-50 p-6 transition hover:border-blue-200 hover:bg-blue-50/40"
+                className="flex flex-col items-center gap-3 rounded-2xl border border-slate-100 bg-slate-50 p-6 text-center transition hover:border-blue-200 hover:bg-blue-50/40"
               >
-                <div className="mb-4 flex items-center gap-3">
-                  <span className="text-2xl">{cat.icon}</span>
-                  <p className="text-sm font-bold text-slate-800">{cat.title}</p>
-                </div>
-                <ul className="space-y-2">
-                  {cat.skills.map((skill) => (
-                    <li key={skill} className="flex items-center gap-2 text-sm text-slate-600">
-                      <span className="h-1.5 w-1.5 flex-shrink-0 rounded-full bg-blue-400" />
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
+                <span className="text-3xl">{cat.icon}</span>
+                <p className="text-sm font-semibold text-slate-700">{cat.title}</p>
               </div>
             ))}
           </div>
 
-          <div className="mt-10 text-center">
+          <div className="mt-8 text-center">
             <Link
               href="/skills"
               className="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-semibold text-slate-700 shadow-sm transition hover:border-blue-400 hover:text-blue-600"

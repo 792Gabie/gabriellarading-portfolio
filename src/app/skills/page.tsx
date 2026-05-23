@@ -72,7 +72,7 @@ export default function SkillsPage() {
           </p>
           <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl">Skills</h1>
           <p className="mt-4 max-w-2xl text-slate-300">
-            Built across 5+ years in regulated financial services — technical depth paired
+            Built across 6+ years in regulated financial services — technical depth paired
             with the operational and human skills to make systems actually get adopted.
           </p>
         </div>

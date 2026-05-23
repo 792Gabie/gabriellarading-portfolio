@@ -1,18 +1,3 @@
-const speaking = [
-  {
-    event: "Prudential Zambia",
-    topic: "Innovation at Work",
-    date: "August 2026",
-    location: "Lusaka, Zambia",
-    status: "Upcoming",
-    statusColor: "bg-blue-100 text-blue-700",
-    description:
-      "Invited as a guest speaker to share insights on driving innovation from within — covering how to identify operational gaps, build AI-powered solutions, and lead change in regulated financial services environments. Drawing on experience building InsuNasi and delivering 25+ workflow improvements at Prudential Kenya.",
-    topics: ["AI in Insurance", "Operational Innovation", "Change from Within", "Building in Regulated Environments"],
-    icon: "🎤",
-  },
-]
-
 const aiProjects = [
   {
     title: "InsuNasi",
@@ -49,6 +34,22 @@ const aiProjects = [
 ]
 
 const professional = [
+  {
+    title: "UAT Microsoft Copilot Agent",
+    company: "Prudential Life Assurance Kenya",
+    year: "2024",
+    status: "Deployed",
+    statusColor: "bg-green-100 text-green-700",
+    description:
+      "Configured a Microsoft Copilot agent to automate UAT test case creation and review for the project delivery team — eliminating the manual effort of writing, structuring, and reviewing test cases across large system implementations. Deployed and adopted by the team as part of their standard delivery workflow.",
+    outcomes: [
+      "Reduced UAT preparation time from 4 days to 4 hours — a 95%+ efficiency gain",
+      "Freed the project team to focus on defect resolution and higher-value delivery tasks",
+      "Adopted in production across live system implementation workstreams at Prudential Kenya",
+    ],
+    tags: ["Microsoft Copilot", "UAT Automation", "AI", "Systems Implementation", "Productivity"],
+    icon: "🧪",
+  },
   {
     title: "Customer Engagement Sampling Project",
     company: "Prudential Life Assurance Kenya",
@@ -178,59 +179,16 @@ export default function ProjectsPage() {
             Work, ideas & appearances
           </p>
           <h1 className="text-4xl font-extrabold tracking-tight md:text-5xl">
-            Projects & Speaking
+            Projects
           </h1>
           <p className="mt-4 max-w-2xl text-slate-300">
-            Professional delivery, personal AI projects, and speaking engagements — all
+            Professional delivery, personal AI projects, and portfolio work — all
             connected by one thread: making systems work better for more people.
           </p>
         </div>
       </div>
 
       <div className="mx-auto max-w-5xl px-6 py-16 space-y-20">
-
-        {/* ── Speaking ────────────────────────────────────────────────────── */}
-        <section>
-          <p className="text-xs font-bold uppercase tracking-widest text-blue-600 mb-2">On stage</p>
-          <h2 className="text-3xl font-extrabold text-slate-900 mb-8">Speaking</h2>
-          {speaking.map((s) => (
-            <div
-              key={s.event}
-              className="rounded-2xl bg-white p-7 shadow-sm ring-2 ring-blue-100 transition hover:shadow-md"
-            >
-              <div className="flex flex-wrap items-start justify-between gap-4">
-                <div className="flex items-start gap-4">
-                  <span className="text-3xl">{s.icon}</span>
-                  <div>
-                    <div className="flex flex-wrap items-center gap-2">
-                      <h3 className="font-bold text-slate-900 text-lg">{s.event}</h3>
-                      <span className={`rounded-full px-2.5 py-0.5 text-xs font-semibold ${s.statusColor}`}>
-                        {s.status}
-                      </span>
-                    </div>
-                    <p className="text-sm font-semibold text-blue-600 mt-0.5">
-                      &ldquo;{s.topic}&rdquo;
-                    </p>
-                    <p className="text-xs text-slate-400 mt-0.5">
-                      {s.location} &nbsp;·&nbsp; {s.date}
-                    </p>
-                  </div>
-                </div>
-              </div>
-              <p className="mt-5 text-sm leading-relaxed text-slate-600">{s.description}</p>
-              <div className="mt-5">
-                <p className="text-xs font-bold uppercase tracking-wide text-slate-400 mb-2">Covering</p>
-                <div className="flex flex-wrap gap-2">
-                  {s.topics.map((t) => (
-                    <span key={t} className="rounded-full border border-blue-100 bg-blue-50 px-3 py-1 text-xs font-medium text-blue-700">
-                      {t}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
-          ))}
-        </section>
 
         {/* ── AI Projects ─────────────────────────────────────────────────── */}
         <section>
